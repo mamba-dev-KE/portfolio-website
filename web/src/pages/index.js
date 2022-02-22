@@ -4,10 +4,7 @@ import "normalize.css";
 import NavBar from "../components/NavBar/NavBar";
 import Layout from "../components/Layout/Layout";
 
-
 export default function Home({ data }) {
-  const { edges } = data?.allSanityBlogPost;
-
   return (
     <>
       <React.StrictMode>
@@ -17,21 +14,3 @@ export default function Home({ data }) {
     </>
   );
 }
-
-export const query = graphql`
-  query MyQuery {
-    allSanityBlogPost {
-      totalCount
-      edges {
-        node {
-          _id
-          name
-          sponsor {
-            name
-            url
-          }
-        }
-      }
-    }
-  }
-`;
