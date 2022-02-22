@@ -9,19 +9,18 @@ module.exports = {
   plugins: [],
 }
 module.exports = {
-  
   plugins: [
     {
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: `rzxqpkv3`,
-        dataset: `production`,        
-        token: process.env.SANITY_TOKEN,        
-        graphqlTag: 'default',
+        dataset: `production`,
+        token: process.env.SANITY_TOKEN,
+        graphqlTag: "default",
       },
     },
-     `gatsby-transformer-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
   ],
-  
 }
