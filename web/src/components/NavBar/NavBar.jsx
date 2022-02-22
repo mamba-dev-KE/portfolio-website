@@ -19,7 +19,7 @@ const NavBar = () => {
       <div className="header__container flex">
         <h3 className="header__logo cursor">Joseph</h3>
         <nav className="nav" style={isOpen ? navStyles : null}>
-          <ul className="nav__list flex">
+          <ul className="nav__list">
             {["Home", "About", "Projects", "Skills", "Contact"].map(
               listItem => (
                 <li key={listItem}>{listItem}</li>

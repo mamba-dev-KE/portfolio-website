@@ -27,7 +27,10 @@
       font-family: calibri;
       font-size: 2.3rem;
 
-      --gap: 2.5rem;
+      @media (min-width: 768px) {
+        display: flex;
+        gap: 2.5rem;
+      }
     }
 
     @media (max-width: 768px) {
