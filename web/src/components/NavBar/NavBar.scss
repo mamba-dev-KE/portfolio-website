@@ -15,6 +15,7 @@
   .header__logo {
     font-size: 2.2rem;
     font-family: cursive;
+    cursor: pointer;
   }
 
   .nav {
@@ -25,6 +26,8 @@
       list-style-type: none;
       font-family: calibri;
       font-size: 2.3rem;
+
+      --gap: 2.5rem;
     }
 
     @media (max-width: 768px) {
@@ -41,16 +44,19 @@
       .nav__list > * {
         margin-top: 1em;
         color: white;
+        font-weight: bold;
       }
     }
   }
 
-  .nav.open {
-    display: block;
-  }
-
   .header__menu {
+    border: 0;
+    background: transparent;
     z-index: 2;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   .header__menu-icon {

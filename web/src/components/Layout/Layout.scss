@@ -52,11 +52,15 @@ body {
 
 .grid {
   display: grid;
-  gap: var(--gap, 1rem);
+  // gap: var(--gap, 1rem);
 }
 
 .container {
   max-width: 100rem;
   padding-inline: 2em;
   margin-inline: auto;
+}
+
+.cursor {
+  cursor: pointer;
 }
