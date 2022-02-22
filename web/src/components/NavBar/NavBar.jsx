@@ -29,13 +29,13 @@ const NavBar = () => {
           </ul>
         </nav>
         <DarkMode />
-        <div className="header__menu" onClick={handleClick}>
+        <button className="header__menu" onClick={handleClick}>
           {isOpen ? (
             <AiOutlineClose className="header__menu-icon header__menu-icon--close" />
           ) : (
             <AiOutlineMenu className="header__menu-icon" />
           )}
-        </div>
+        </button>
       </div>
     </header>
   );

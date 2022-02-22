@@ -1,11 +1,11 @@
 {
   "root": true,
-  "api": {
-    "projectId": "rzxqpkv3",
-    "dataset": "production"
-  },
   "project": {
-    "name": "portfolio website"
+    "name": "portfolio-website"
+  },
+  "api": {
+    "projectId": "inm1xupw",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

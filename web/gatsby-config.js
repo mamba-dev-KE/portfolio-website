@@ -7,13 +7,13 @@
 module.exports = {
   /* Your site config here */
   plugins: [],
-}
+};
 module.exports = {
   plugins: [
     {
       resolve: `gatsby-source-sanity`,
       options: {
-        projectId: `rzxqpkv3`,
+        projectId: `inm1xupw`,
         dataset: `production`,
         token: process.env.SANITY_TOKEN,
         graphqlTag: "default",
@@ -23,4 +23,4 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
   ],
-}
+};

@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-website",
+  "name": "portfoliowebsite",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -8,8 +8,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build",
-    "deploy": "sanity graphql deploy"
+    "build": "sanity build"
   },
   "keywords": [
     "sanity"

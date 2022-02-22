@@ -23,7 +23,7 @@ const DarkMode = () => {
     >
       <AnimatePresence>
         <motion.div layout className="switch">
-          {isDark ? (
+          {!isDark ? (
             <FaMoon className="switch__moon" />
           ) : (
             <FaSun className="switch__sun" />
