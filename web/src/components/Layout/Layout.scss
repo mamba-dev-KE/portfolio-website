@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props";
+
 :root {
   /* colors */
   --clr-dark: 230 35% 7%;
@@ -15,9 +17,9 @@
   --fs-200: 0.875rem;
 
   /* font-families */
-  --ff-serif: "Bellefair", serif;
+  --ff-serif: --font-sans;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
-  --ff-sans-normal: "Barlow", sans-serif;
+  --ff-sans-normal: --font-mono;
 
   font-size: 10px;
 }
@@ -37,6 +39,7 @@
 
 body {
   font-size: 1.6rem;
+  font-family: var(--ff-serif);
 }
 
 /* ------------------ */

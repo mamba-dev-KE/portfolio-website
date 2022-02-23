@@ -1,3 +1,8 @@
+$size-small: var(--size-4);
+$size-normal: --size-6;
+$size-large: --size-8;
+$size-extra-large: --size-10;
+
 .header {
   background-color: hsl(34 78% 91% / 0.9);
   height: 8rem;
@@ -13,8 +18,9 @@
   margin-inline: auto;
 
   .header__logo {
-    font-size: 2.2rem;
-    font-family: cursive;
+    font-size: var(--size-9);
+    font-family: var(--ff-sans-normal);
+    font-family: "Parisienne";
     cursor: pointer;
   }
 
@@ -33,22 +39,20 @@
       }
     }
 
-    @media (max-width: 768px) {
-      position: fixed;
-      top: 0;
-      right: -80vw;
-      height: 100vh;
-      width: 80vw;
-      padding: 4em 0 0 2em;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 100vw;
+    padding: 4em 0 0 2em;
 
-      background-color: hsl(0 0% 0% / 0.85);
-      backdrop-filter: blur(5px);
+    background-color: hsl(0 0% 0% / 0.85);
+    backdrop-filter: blur(5px);
 
-      .nav__list > * {
-        margin-top: 1em;
-        color: white;
-        font-weight: bold;
-      }
+    .nav__list > * {
+      margin-top: 1em;
+      color: white;
+      font-weight: bold;
     }
   }
 
@@ -56,17 +60,13 @@
     border: 0;
     background: transparent;
     z-index: 2;
-
-    @media (min-width: 768px) {
-      display: none;
-    }
   }
 
   .header__menu-icon {
-    font-size: 3.5rem;
+    font-size: var(--size-9);
 
     @media (min-width: 768px) {
-      display: none;
+      font-size: var(--size-10);
     }
   }
 
