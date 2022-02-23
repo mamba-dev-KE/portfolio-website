@@ -58,8 +58,11 @@ const NavBar = () => {
               {["Home", "About", "Projects", "Skills", "Contact"].map(
                 listItem => (
                   <motion.li
-                    variants={mountVariant}
-                    whileHover="hover"
+                    whileHover={{
+                      opacity: 0.9,
+                      textShadow: "1px 0 6px var(--red-8)",
+                    }}
+                    transition={{ duration: 0.05, ease: "easeOut" }}
                     className="cursor"
                     key={listItem}
                   >

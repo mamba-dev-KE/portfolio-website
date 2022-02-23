@@ -4,7 +4,7 @@ import { AiOutlineGithub } from "@react-icons/all-files/ai/AiOutlineGithub";
 import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter";
 import { AiFillLinkedin } from "@react-icons/all-files/ai/AiFillLinkedin";
 import { AiFillCodepenCircle } from "@react-icons/all-files/ai/AiFillCodepenCircle";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, calcLength } from "framer-motion";
 
 const Socials = () => {
   return (

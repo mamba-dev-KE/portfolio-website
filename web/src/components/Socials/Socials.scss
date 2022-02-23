@@ -9,6 +9,10 @@
   font-size: 3.5rem;
   text-align: center;
   transition: transform 100ms ease-in-out;
+
+  @media (min-width: 768px) {
+    font-size: 4.5rem;
+  }
 }
 
 .social__icon:nth-child(1):hover,
