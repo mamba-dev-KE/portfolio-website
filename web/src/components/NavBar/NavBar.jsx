@@ -3,6 +3,7 @@ import "./NavBar.scss";
 import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { motion, AnimatePresence } from "framer-motion";
+import Socials from "../Socials/Socials";
 
 const NavBar = () => {
   const [isOpen, setisOpen] = React.useState(false);
@@ -12,21 +13,44 @@ const NavBar = () => {
   };
 
   const navStyles = {
-    transform: "translateX(-100%)",
+    // transform: "translateX(-100%)",
+  };
+
+  /* Animation Variants */
+
+  const mountVariant = {
+    invinsible: { opacity: 0, y: -50, scale: 0.2 },
+    visible: { opacity: 1, y: 0, x: 0, scale: 1 },
+    transition: { duration: 3, ease: "easeIn" },
+    hover: { scale: 1.1, opacity: 0.9 },
+  };
+
+  const navVariant = {
+    invinsible: { opacity: 0, y: "-100vh" },
+    visible: { opacity: 1, y: 0 },
+    transition: { duration: 10, ease: "easeIn" },
   };
 
   return (
     <header className="header flex">
       <div className="header__container flex">
         <motion.span
-          initial={{ opacity: 0, y: -50, scale: 0.2 }}
-          animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-          transition={{ duration: 1, ease: "easeIn" }}
+          variants={mountVariant}
+          initial="invinsible"
+          animate="visible"
+          transition="transition"
+          whileHover="hover"
           className="header__logo cursor"
         >
           Joseph
         </motion.span>
-        <nav className="nav grid" style={isOpen ? navStyles : null}>
+        <motion.nav
+          variants={navVariant}
+          initial="invinsible"
+          animate="visible"
+          className="nav grid"
+          style={isOpen ? navStyles : null}
+        >
           <ul className="nav__list flex">
             {["Home", "About", "Projects", "Skills", "Contact"].map(
               listItem => (
@@ -36,14 +60,23 @@ const NavBar = () => {
               )
             )}
           </ul>
-        </nav>
-        <button className="header__menu cursor" onClick={handleClick}>
+          <Socials />
+        </motion.nav>
+        <motion.button
+          variants={mountVariant}
+          initial="invinsible"
+          animate="visible"
+          transition="transition"
+          whileHover="hover"
+          className="header__menu cursor"
+          onClick={handleClick}
+        >
           {isOpen ? (
             <AiOutlineClose className="header__menu-icon header__menu-icon--close" />
           ) : (
             <AiOutlineMenu className="header__menu-icon" />
           )}
-        </button>
+        </motion.button>
       </div>
     </header>
   );

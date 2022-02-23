@@ -40,6 +40,7 @@
 body {
   font-size: 1.6rem;
   font-family: var(--ff-serif);
+  overflow: hidden;
 }
 
 /* ------------------ */
@@ -55,7 +56,7 @@ body {
 
 .grid {
   display: grid;
-  // gap: var(--gap, 1rem);
+  gap: var(--gap, 1rem);
 }
 
 .container {
