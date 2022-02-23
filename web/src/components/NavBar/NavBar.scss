@@ -48,7 +48,7 @@ $size-extra-large: --size-10;
     width: 100%;
     padding: 4em 0 0 2em;
 
-    background-color: hsl(0 0% 0% / 0.85);
+    background-color: hsl(0 0% 0% / 0.88);
     backdrop-filter: blur(2px);
 
     .nav__list {
@@ -74,6 +74,10 @@ $size-extra-large: --size-10;
       margin-top: 1em;
       color: white;
       font-weight: bold;
+
+      &:focus {
+        cursor: pointer;
+      }
     }
   }
 

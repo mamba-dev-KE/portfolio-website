@@ -13,7 +13,7 @@ const Socials = () => {
         initial={{ opacity: 0, scale: 0.1 }}
         animate={{ opacity: 1, scale: 1.1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="socials flex"
+        className="socials flex cursor"
       >
         <AiOutlineGithub className="social__icon" />
         <AiOutlineTwitter className="social__icon" />

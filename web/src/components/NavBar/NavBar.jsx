@@ -17,7 +17,6 @@ const NavBar = () => {
   };
 
   /* Animation Variants */
-
   const mountVariant = {
     invinsible: { opacity: 0, y: -50, scale: 0.2 },
     visible: { opacity: 1, y: 0, x: 0, scale: 1 },
@@ -28,7 +27,8 @@ const NavBar = () => {
   const navVariant = {
     invinsible: { opacity: 0, y: "-100vh" },
     visible: { opacity: 1, y: 0 },
-    transition: { duration: 10, ease: "easeIn" },
+    exit: { opacity: 0, y: "100vh" },
+    transition: { duration: 10, ease: "easeInOut" },
   };
 
   return (
@@ -44,24 +44,33 @@ const NavBar = () => {
         >
           Joseph
         </motion.span>
-        <motion.nav
-          variants={navVariant}
-          initial="invinsible"
-          animate="visible"
-          className="nav grid"
-          style={isOpen ? navStyles : null}
-        >
-          <ul className="nav__list flex">
-            {["Home", "About", "Projects", "Skills", "Contact"].map(
-              listItem => (
-                <motion.li className="cursor" key={listItem}>
-                  {listItem}
-                </motion.li>
-              )
-            )}
-          </ul>
-          <Socials />
-        </motion.nav>
+        <AnimatePresence>
+          <motion.nav
+            variants={navVariant}
+            initial="invinsible"
+            animate={isOpen ? "visible" : ""}
+            transition="transition"
+            exit="exit"
+            className="nav grid"
+            style={isOpen ? navStyles : null}
+          >
+            <ul className="nav__list flex">
+              {["Home", "About", "Projects", "Skills", "Contact"].map(
+                listItem => (
+                  <motion.li
+                    variants={mountVariant}
+                    whileHover="hover"
+                    className="cursor"
+                    key={listItem}
+                  >
+                    {listItem}
+                  </motion.li>
+                )
+              )}
+            </ul>
+            <Socials />
+          </motion.nav>
+        </AnimatePresence>
         <motion.button
           variants={mountVariant}
           initial="invinsible"
