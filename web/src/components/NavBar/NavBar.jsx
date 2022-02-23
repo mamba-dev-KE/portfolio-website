@@ -2,6 +2,7 @@ import * as React from "react";
 import "./NavBar.scss";
 import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = () => {
   const [isOpen, setisOpen] = React.useState(false);
@@ -17,12 +18,21 @@ const NavBar = () => {
   return (
     <header className="header flex">
       <div className="header__container flex">
-        <h3 className="header__logo cursor">Joseph</h3>
-        <nav className="nav" style={isOpen ? navStyles : null}>
-          <ul className="nav__list">
+        <motion.span
+          initial={{ opacity: 0, y: -50, scale: 0.2 }}
+          animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
+          transition={{ duration: 1, ease: "easeIn" }}
+          className="header__logo cursor"
+        >
+          Joseph
+        </motion.span>
+        <nav className="nav grid" style={isOpen ? navStyles : null}>
+          <ul className="nav__list flex">
             {["Home", "About", "Projects", "Skills", "Contact"].map(
               listItem => (
-                <li key={listItem}>{listItem}</li>
+                <motion.li className="cursor" key={listItem}>
+                  {listItem}
+                </motion.li>
               )
             )}
           </ul>
