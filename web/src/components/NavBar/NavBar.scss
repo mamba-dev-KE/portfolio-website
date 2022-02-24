@@ -6,9 +6,8 @@ $size-extra-large: --size-10;
 .header {
   background-color: hsl(6 93% 71% / 0.9);
   backdrop-filter: blur(3px);
-  min-height: 8rem;
   align-items: center;
-  padding-block: 3em;
+  padding-block: 1.5em;
 
   z-index: 1;
 }
