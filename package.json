@@ -25,5 +25,8 @@
   "devDependencies": {
     "lerna": "^4.0.0",
     "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "gatsby-source-filesystem": "^4.8.0"
   }
 }

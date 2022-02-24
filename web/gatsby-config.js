@@ -20,8 +20,16 @@ module.exports = {
         overlayDrafts: true,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images/`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
   ],
 };

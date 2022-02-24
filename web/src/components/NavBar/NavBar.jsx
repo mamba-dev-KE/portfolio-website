@@ -12,27 +12,32 @@ const NavBar = () => {
     setisOpen(!isOpen);
   };
 
-  const navStyles = {
-    // transform: "translateX(-100%)",
-  };
-
   /* Animation Variants */
   const mountVariant = {
     invinsible: { opacity: 0, y: -50, scale: 0.2 },
     visible: { opacity: 1, y: 0, x: 0, scale: 1 },
-    transition: { duration: 3, ease: "easeIn" },
+    transition: { type: "spring", stiffness: 200, ease: "easeIn" },
     hover: { scale: 1.1, opacity: 0.9 },
   };
 
   const navVariant = {
-    invinsible: { opacity: 0, y: "-100vh" },
-    visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: "100vh" },
-    transition: { duration: 10, ease: "easeInOut" },
+    invinsible: { y: "-100vh", opacity: 0, scale: 0.8 },
+    visible: { y: 0, opacity: 1, scale: 1 },
+    exit: { rotate: 50, scale: 0.2, y: "100vh", opacity: 0 },
+    transition: { type: "spring", delay: 1, stiffness: 200, ease: "easeInOut" },
   };
 
   return (
-    <header className="header flex">
+    <motion.header
+      initial={{ y: "-100vh", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 1,
+        type: "spring",
+        stiffness: 80,
+      }}
+      className="header flex"
+    >
       <div className="header__container flex">
         <motion.span
           variants={mountVariant}
@@ -44,7 +49,7 @@ const NavBar = () => {
         >
           Joseph
         </motion.span>
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter={true} initial={true}>
           <motion.nav
             variants={navVariant}
             initial="invinsible"
@@ -52,7 +57,6 @@ const NavBar = () => {
             transition="transition"
             exit="exit"
             className="nav grid"
-            style={isOpen ? navStyles : null}
           >
             <ul className="nav__list flex">
               {["Home", "About", "Projects", "Skills", "Contact"].map(
@@ -74,6 +78,7 @@ const NavBar = () => {
             <Socials />
           </motion.nav>
         </AnimatePresence>
+
         <motion.button
           variants={mountVariant}
           initial="invinsible"
@@ -90,7 +95,7 @@ const NavBar = () => {
           )}
         </motion.button>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

@@ -6,8 +6,11 @@
 }
 
 .social__icon {
+  z-index: 100;
   font-size: 3.5rem;
   text-align: center;
+  color: hsl(0, 0%, 41%);
+  color: hsl(0 0% 29% / 0.7);
   transition: transform 100ms ease-in-out;
 
   @media (min-width: 768px) {
