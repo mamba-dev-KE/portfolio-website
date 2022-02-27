@@ -46,15 +46,15 @@
   border-radius: 50%;
 
   background-color: var(--clr-primary);
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   z-index: -1;
 }
 
 .hero__scroll {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: white;
-  animation: moveArrow 2s infinite forwards;
+  animation: moveArrow 2.5s infinite forwards;
 }
 
 @keyframes moveArrow {
