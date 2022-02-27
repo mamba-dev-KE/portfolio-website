@@ -3,40 +3,32 @@
   height: 100%;
   width: 100%;
   padding: 1rem 0;
+  // z-index: 3;
 }
 
 .social__icon {
-  z-index: 100;
   font-size: 3.5rem;
   text-align: center;
-  color: hsl(0, 0%, 41%);
   color: hsl(0 0% 29% / 0.7);
-  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease;
 
   @media (min-width: 768px) {
     font-size: 4.5rem;
   }
 }
 
-.social__icon:nth-child(1):hover,
-.social__icon:nth-child(2):hover,
-.social__icon:nth-child(3):hover,
-.social__icon:nth-child(4):hover {
+.social__icon:hover {
   transform: scale(1.4);
 }
 
-.social__icon:nth-child(1):hover {
+a:nth-child(1) > svg:hover {
   color: #bdbfc1;
 }
 
-.social__icon:nth-child(2):hover {
+a:nth-child(2) > svg:hover {
   color: #1a8cd8;
 }
 
-.social__icon:nth-child(3):hover {
-  color: #0a66c2;
-}
-
-.social__icon:nth-child(4):hover {
+a:nth-child(3) > svg:hover {
   color: #0a66c2;
 }

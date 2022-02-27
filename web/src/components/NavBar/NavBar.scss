@@ -4,12 +4,11 @@ $size-large: --size-8;
 $size-extra-large: --size-10;
 
 .header {
-  background-color: hsl(6 93% 71% / 0.9);
+  box-shadow: 0 0 6px 0 black;
   backdrop-filter: blur(3px);
   align-items: center;
   padding-block: 1.5em;
-
-  z-index: 1;
+  background-color: tomato;
 }
 
 .header__container {
@@ -39,8 +38,6 @@ $size-extra-large: --size-10;
     align-content: space-evenly;
     grid-gap: 10rem;
 
-    z-index: 3;
-
     position: fixed;
     top: 0;
     right: 0;
@@ -48,8 +45,7 @@ $size-extra-large: --size-10;
     width: 100%;
     padding: 4em 0 0 2em;
 
-    background-color: hsl(0 0% 0% / 0.88);
-    backdrop-filter: blur(10px);
+    background-color: hsl(0 0% 0%);
 
     .nav__list {
       flex-direction: column;
@@ -84,7 +80,7 @@ $size-extra-large: --size-10;
   .header__menu {
     border: 0;
     background: transparent;
-    z-index: 4;
+    z-index: 1;
   }
 
   .header__menu-icon {
