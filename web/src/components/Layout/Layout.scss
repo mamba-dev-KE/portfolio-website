@@ -39,9 +39,13 @@
 
 body {
   font-size: 1.6rem;
-  font-family: var(--ff-serif);
+  font-family: "Roboto";
   overflow: hidden;
 }
+
+// .main {
+//   width: calc(100% - 2rem);
+// }
 
 /* ------------------ */
 /* UTILITY CLASSES    */
@@ -68,5 +72,3 @@ body {
 .cursor {
   cursor: pointer;
 }
-
-

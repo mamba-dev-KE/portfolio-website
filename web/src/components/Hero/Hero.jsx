@@ -23,8 +23,14 @@ const Hero = () => {
           placeholder="tracedSVG"
           alt=""
         />
-        <h1 className="hero__title">Junior Fullstack Javascript Developer</h1>
-        <p>Hi</p>
+        <div className="hero__info flex">
+          <StaticImage
+            src="../../assets/images/avatar.svg"
+            className="hero__avatar"
+          />
+          <h1 className="hero__title">Junior Frontend Developer</h1>
+          <p>Hi</p>
+        </div>
       </motion.div>
     </section>
   );
