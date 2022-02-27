@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./About.scss";
-import Layout from "../Layout/Layout";
 import bgImg from "../../assets/images/inn.svg";
 
 const About = () => {

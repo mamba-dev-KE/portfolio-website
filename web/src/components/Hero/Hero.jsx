@@ -28,6 +28,7 @@ const Hero = () => {
             src="../../assets/images/avatar.svg"
             className="hero__avatar"
             placeholder="tracedSVG"
+            alt=""
           />
         </motion.div>
         <motion.p
