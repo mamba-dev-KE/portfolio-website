@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <motion.div className="hero__info flex layout">
+      <motion.div className="hero__info container flex layout">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

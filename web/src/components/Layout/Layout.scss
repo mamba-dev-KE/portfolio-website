@@ -8,6 +8,7 @@
   --ff-serif: --font-sans;
   --ff-sans-normal: "Roboto", sans-serif;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 /* Box sizing */
@@ -24,15 +25,17 @@ body {
   font-family: var(--ff-sans-normal);
 }
 
+img {
+  object-fit: contain;
+}
+
 section {
-  padding-block: 3em;
+  padding-block: 4em;
 }
 
 /* ------------------ */
 /* UTILITY CLASSES    */
 /* ------------------ */
-
-/* General */
 
 .flex {
   display: flex;
@@ -45,8 +48,7 @@ section {
 }
 
 .container {
-  max-width: 100rem;
-  padding-inline: 2em;
+  width: calc(100% - 3.5rem);
   margin-inline: auto;
 }
 

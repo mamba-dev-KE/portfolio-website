@@ -68,7 +68,13 @@ const NavBar = () => {
                     className="cursor"
                     key={listItem}
                   >
-                    {listItem}
+                    <a
+                      href={`#${listItem.toLocaleLowerCase()}`}
+                      onClick={handleClick}
+                      className="nav__link"
+                    >
+                      {listItem}
+                    </a>
                   </motion.li>
                 )
               )}
