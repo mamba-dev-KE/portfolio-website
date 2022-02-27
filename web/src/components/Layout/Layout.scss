@@ -2,31 +2,13 @@
 
 :root {
   /* colors */
-  --clr-dark: 230 35% 7%;
-  --clr-light: 231 77% 90%;
-  --clr-white: 0 0% 100%;
-
-  /* font-sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
-  --fs-300: 1rem;
-  --fs-200: 0.875rem;
+  --clr-primary: hsl(9, 100%, 64%);
 
   /* font-families */
   --ff-serif: --font-sans;
-  --ff-sans-cond: ;
-  --ff-sans-normal: --font-mono;
-
+  --ff-sans-normal: "Roboto", sans-serif;
   font-size: 10px;
 }
-
-/* ------------------ */
-/* RESET              */
-/* ------------------ */
 
 /* Box sizing */
 *,
@@ -39,8 +21,11 @@
 
 body {
   font-size: 1.6rem;
-  font-family: "Roboto";
-  overflow: hidden;
+  font-family: var(--ff-sans-normal);
+}
+
+section {
+  padding-block: 3em;
 }
 
 /* ------------------ */

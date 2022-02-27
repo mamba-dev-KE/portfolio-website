@@ -1,25 +1,6 @@
 .hero {
-  height: 100vh;
   width: 100%;
 }
-
-// .hero__container {
-//   border: 1px solid red;
-// }
-
-// .hero__container::after {
-//   content: "";
-
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: -2;
-
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   background-color: hsl(0 0% 0% / 0.8);
-// }
 
 .hero__hello {
   font-size: 6.5vw;
@@ -64,12 +45,20 @@
 
   border-radius: 50%;
 
-  background-color: tomato;
-  width: 5rem;
-  height: 5rem;
+  background-color: var(--clr-primary);
+  width: 6rem;
+  height: 6rem;
+  z-index: -1;
 }
 
 .hero__scroll {
   font-size: 3.5rem;
   color: white;
+  animation: moveArrow 2s infinite forwards;
+}
+
+@keyframes moveArrow {
+  50% {
+    transform: translateY(5px) scale(1.05);
+  }
 }

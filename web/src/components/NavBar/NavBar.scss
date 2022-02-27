@@ -8,7 +8,7 @@ $size-extra-large: --size-10;
   backdrop-filter: blur(3px);
   align-items: center;
   padding-block: 1.5em;
-  background-color: tomato;
+  background-color: var(--clr-primary);
 }
 
 .header__container {
