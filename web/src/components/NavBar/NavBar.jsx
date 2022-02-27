@@ -29,12 +29,10 @@ const NavBar = () => {
 
   return (
     <motion.header
-      initial={{ y: "-100vh", opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{
-        delay: 1,
-        type: "spring",
-        stiffness: 80,
+        duration: 0.35,
       }}
       className="header flex"
     >

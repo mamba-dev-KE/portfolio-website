@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import "normalize.css";
 import NavBar from "../components/NavBar/NavBar";
 import Layout from "../components/Layout/Layout";

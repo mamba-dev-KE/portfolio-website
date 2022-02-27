@@ -5,17 +5,13 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
-};
-module.exports = {
   plugins: [
     {
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: `inm1xupw`,
         dataset: `production`,
-        token: process.env.SANITY_TOKEN,
+        token: process.env.SANITY_READ_TOKEN,
         watchMode: true,
         overlayDrafts: true,
       },
