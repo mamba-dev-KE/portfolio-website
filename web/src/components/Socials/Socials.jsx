@@ -4,7 +4,6 @@ import { AiOutlineGithub } from "@react-icons/all-files/ai/AiOutlineGithub";
 import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter";
 import { AiFillLinkedin } from "@react-icons/all-files/ai/AiFillLinkedin";
 import { motion, AnimatePresence } from "framer-motion";
-import {} from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 
 const Socials = () => {

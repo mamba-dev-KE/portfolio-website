@@ -1,12 +1,17 @@
 import React from "react";
 import "normalize.css";
-import NavBar from "../components/NavBar/NavBar";
-import Layout from "../components/Layout/Layout";
-import Hero from "../components/Hero/Hero";
-import About from "../components/About/About";
-import Footer from "../components/Footer/Footer";
+import {
+  NavBar,
+  Layout,
+  Hero,
+  About,
+  Footer,
+  Projects,
+  Skills,
+  Contact,
+} from "../components";
 
-export default function Home({ data }) {
+export default function Home() {
   return (
     <>
       <React.StrictMode>
@@ -14,6 +19,9 @@ export default function Home({ data }) {
         <Layout>
           <Hero />
           <About />
+          <Projects />
+          <Skills />
+          <Contact />
         </Layout>
         <Footer />
       </React.StrictMode>

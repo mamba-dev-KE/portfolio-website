@@ -4,13 +4,16 @@
   height: 20vh;
   overflow-x: hidden;
 
+  @media (min-width: 768px) {
+    height: 14vh;
+  }
+
   .footer__info {
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     padding-block: 1em;
-    --gap: 2em;
 
     @media (min-width: 768px) {
       flex-direction: row;

@@ -3,8 +3,10 @@ import "./Hero.scss";
 import avatar from "../../assets/images/avataaars.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowDown } from "@react-icons/all-files/bs/BsArrowDown";
+import { DarkMode } from "../../components";
 
 const Hero = () => {
+  // Animation variants
   const heroVariant = {
     initial: { y: "-100vh", opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -14,7 +16,6 @@ const Hero = () => {
       stiffness: 80,
     },
   };
-
   const avatarVariant = {
     initial: { y: -100, opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -34,8 +35,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero">
+    <section className="hero">     
       <div className="hero__info container flex layout">
+        <DarkMode />
         <div className="hero__avatar-container flex">
           <img src={avatar} alt="" className="hero__avatar" />
         </div>

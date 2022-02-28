@@ -1,9 +1,9 @@
-import * as React from "react";
+import React from "react";
 import "./NavBar.scss";
 import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { motion, AnimatePresence } from "framer-motion";
-import Socials from "../Socials/Socials";
+import { Socials } from "../../components";
 
 const NavBar = () => {
   const [isOpen, setisOpen] = React.useState(false);
@@ -47,6 +47,7 @@ const NavBar = () => {
         >
           Joseph
         </motion.span>
+
         <AnimatePresence exitBeforeEnter={true} initial={true}>
           <motion.nav
             variants={navVariant}
@@ -82,7 +83,6 @@ const NavBar = () => {
             <Socials />
           </motion.nav>
         </AnimatePresence>
-
         <motion.button
           variants={mountVariant}
           initial="invinsible"

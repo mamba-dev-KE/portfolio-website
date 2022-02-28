@@ -1,6 +1,6 @@
 import React from "react";
-import Socials from "../Socials/Socials";
 import "./Footer.scss";
+import { Socials } from "../../components";
 
 const Footer = () => {
   const year = new Date().getFullYear();
