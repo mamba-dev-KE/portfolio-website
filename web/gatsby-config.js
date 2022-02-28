@@ -1,10 +1,9 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
+  siteMetadata: {
+    title: `Joseph Maramba | Portfolio`,
+    siteUrl: `https://www.josephmaramba.tech`,
+    description: `MY Frontend developer portfolio`,
+  },
   plugins: [
     {
       resolve: `gatsby-source-sanity`,
