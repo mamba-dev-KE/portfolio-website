@@ -9,6 +9,13 @@ $size-extra-large: --size-10;
   align-items: center;
   padding-block: 1.5em;
   background-color: var(--clr-primary);
+  opacity: 0.1;
+
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
 }
 
 .header__container {
