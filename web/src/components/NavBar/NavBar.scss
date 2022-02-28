@@ -5,10 +5,11 @@ $size-extra-large: --size-10;
 
 .header {
   box-shadow: 0 0 6px 0 black;
-  backdrop-filter: blur(3px);
   align-items: center;
   padding-block: 1.5em;
-  background-color: var(--clr-primary);
+
+  background-color: hsl(var(--clr-primary) / 0.9);
+  backdrop-filter: blur(3px);
   opacity: 0.1;
 
   position: fixed;

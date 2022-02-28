@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.scss";
 import { StaticImage } from "gatsby-plugin-image";
+import avatar from "../../assets/images/avataaars.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowDown } from "@react-icons/all-files/bs/BsArrowDown";
 
@@ -24,12 +25,7 @@ const Hero = () => {
           transition={{ duration: 0.5, ease: "easeIn" }}
           className="hero__avatar-container flex"
         >
-          <StaticImage
-            src="../../assets/images/avatar.svg"
-            className="hero__avatar"
-            placeholder="tracedSVG"
-            alt=""
-          />
+          <img src={avatar} alt="" />
         </motion.div>
         <motion.p
           initial={{ y: 0, opacity: 0 }}
