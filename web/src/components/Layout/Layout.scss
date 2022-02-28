@@ -3,6 +3,8 @@
 :root {
   /* colors */
   --clr-primary: 0 100% 68%;
+  --clr-dark: 0 0% 0%;
+  --clr-light: 100 100% 100%;
 
   /* font-families */
   --ff-serif: --font-sans;
@@ -26,7 +28,7 @@ body {
 }
 
 img {
-  object-fit: contain;
+  max-width: 100%;
 }
 
 section {
@@ -48,6 +50,7 @@ section {
 }
 
 .container {
+  max-width: 230rem;
   width: calc(100% - 3.5rem);
   margin-inline: auto;
 }

@@ -34,6 +34,26 @@
   z-index: -1;
 }
 
+.hero__avatar {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 35rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 45rem;
+  }
+
+  @media (min-width: 1440px) {
+    width: 55rem;
+  }
+
+  @media (min-width: 2560px) {
+    width: 65rem;
+  }
+}
+
 .hero__hello,
 .hero__title {
   text-align: center;

@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar/NavBar";
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
+import Footer from "../components/Footer/Footer";
 
 export default function Home({ data }) {
   return (
@@ -14,6 +15,7 @@ export default function Home({ data }) {
           <Hero />
           <About />
         </Layout>
+        <Footer />
       </React.StrictMode>
     </>
   );

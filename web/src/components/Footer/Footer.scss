@@ -1,0 +1,33 @@
+.footer {
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-light));
+  height: 20vh;
+  overflow-x: hidden;
+
+  .footer__info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-block: 1em;
+    --gap: 2em;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+
+      padding-block: 0;
+    }
+  }
+}
+
+.footer__copyright {
+  margin-block-start: 2em;
+  flex: 1;
+
+  @media (min-width: 768px) {
+    margin-block-start: 0;
+  }
+}

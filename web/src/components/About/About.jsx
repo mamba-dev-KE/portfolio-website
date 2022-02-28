@@ -1,18 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "./About.scss";
 import bgImg from "../../assets/images/inn.svg";
 
 const About = () => {
   return (
     <section className="about" id="about">
-      <motion.h2
-        initial={{ x: -100 }}
-        animate={{ x: 0 }}
-        className="about__title container"
-      >
-        About
-      </motion.h2>
+      <h2 className="about__title container">About</h2>
       <div className="about__info container">
         <p className="about__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
