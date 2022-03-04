@@ -1,0 +1,28 @@
+.skills {
+  overflow: hidden;
+}
+
+.skills__list {
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.skill__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.skill__icon {
+  width: 15rem;
+  align-self: center;
+}
+
+.skill__name {
+  text-transform: uppercase;
+  margin-top: 2em;
+}

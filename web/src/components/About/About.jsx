@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.scss";
+import { StaticQuery, graphql } from "gatsby";
 import bgImg from "../../assets/images/inn.svg";
 
 const About = () => {

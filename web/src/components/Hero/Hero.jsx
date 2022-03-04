@@ -4,9 +4,21 @@ import avatar from "../../assets/images/avataaars.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowDown } from "@react-icons/all-files/bs/BsArrowDown";
 import { DarkMode } from "../../components";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Hero = () => {
-  // Animation variants
+  // graphql query for her data from sanity
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      sanityHero {
+        hello
+        description
+        title
+      }
+    }
+  `);
+
+  // hero animation variants
   const heroVariant = {
     initial: { y: "-100vh", opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -35,31 +47,32 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero">     
+    <section className="hero">
       <div className="hero__info container flex layout">
         <DarkMode />
+
         <div className="hero__avatar-container flex">
           <img src={avatar} alt="" className="hero__avatar" />
         </div>
-        <p className="hero__hello">Hello, I'm Joseph</p>
-        <h1 className="hero__title">I build stuff for the web.</h1>
-        <AnimatePresence exitBeforeEnter={true}>
-          <motion.div
-            initial={{ y: "-100vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1, scale: 1.5 }}
-            whileHover={{
-              scale: 2,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 150,
-              ease: "easeInOut",
-            }}
-            className="hero__arrow-container"
-          >
-            <BsArrowDown className="hero__scroll" />
-          </motion.div>
-        </AnimatePresence>
+
+        <p className="hero__hello">{data.sanityHero.hello}</p>
+        <h1 className="hero__title">{data.sanityHero.title}</h1>
+
+        <motion.div
+          initial={{ y: "-100vh", opacity: 0 }}
+          animate={{ y: 0, opacity: 1, scale: 1.5 }}
+          whileHover={{
+            scale: 2,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            ease: "easeInOut",
+          }}
+          className="hero__arrow-container"
+        >
+          <BsArrowDown className="hero__scroll" />
+        </motion.div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Joseph Maramba | Portfolio`,
     siteUrl: `https://www.josephmaramba.tech`,
-    description: `MY Frontend developer portfolio`,
+    description: `My Frontend developer portfolio`,
   },
   plugins: [
     {

@@ -8,11 +8,12 @@ import { Socials } from "../../components";
 const NavBar = () => {
   const [isOpen, setisOpen] = React.useState(false);
 
+  // click handler function to toggle navbar
   const handleClick = () => {
     setisOpen(!isOpen);
   };
 
-  /* Animation Variants */
+  /* animation Variants */
   const mountVariant = {
     invinsible: { opacity: 0, y: -50, scale: 0.2 },
     visible: { opacity: 1, y: 0, x: 0, scale: 1 },
