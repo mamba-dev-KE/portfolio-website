@@ -18,5 +18,10 @@ export default {
       title: "Description",
       type: "text",
     },
+    {
+      name: "heroImage",
+      title: "hero Image",
+      type: "image",
+    },
   ],
 };

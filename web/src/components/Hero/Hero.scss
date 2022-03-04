@@ -1,6 +1,5 @@
 .hero {
   width: 100%;
-  
 }
 
 .hero__hello {
@@ -36,22 +35,20 @@
 }
 
 .hero__avatar {
-  width: 100%;
+  width: 25rem;
 
   @media (min-width: 768px) {
     width: 35rem;
+    min-height: 40rem;
   }
 
   @media (min-width: 1024px) {
     width: 45rem;
+    min-height: 50rem;
   }
 
   @media (min-width: 1440px) {
-    width: 55rem;
-  }
-
-  @media (min-width: 2560px) {
-    width: 65rem;
+    max-width: 55rem;
   }
 }
 

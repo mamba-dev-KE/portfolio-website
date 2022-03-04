@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowDown } from "@react-icons/all-files/bs/BsArrowDown";
 import { DarkMode } from "../../components";
 import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Hero = () => {
   // graphql query for her data from sanity
@@ -12,11 +13,19 @@ const Hero = () => {
     query HeaderQuery {
       sanityHero {
         hello
-        description
         title
+        heroImage {
+          asset {
+            gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
+          }
+        }
       }
     }
   `);
+
+  const { gatsbyImageData } = data.sanityHero.heroImage.asset;
+
+  console.log();
 
   // hero animation variants
   const heroVariant = {
@@ -50,9 +59,13 @@ const Hero = () => {
     <section className="hero">
       <div className="hero__info container flex layout">
         <DarkMode />
-
-        <div className="hero__avatar-container flex">
-          <img src={avatar} alt="" className="hero__avatar" />
+        <div className="hero__avatar-container">
+          <GatsbyImage
+            image={gatsbyImageData}
+            alt=""
+            className="hero__avatar"
+          />
+          {/* <img src={avatar} alt="" className="hero__avatar" /> */}
         </div>
 
         <p className="hero__hello">{data.sanityHero.hello}</p>

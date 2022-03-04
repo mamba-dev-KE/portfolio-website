@@ -24,10 +24,6 @@ const Skills = () => {
 
   const skillsIcons = data.allSanitySkills.edges;
 
-  skillsIcons.map(skill => console.log(skill.node.icon.asset));
-
-  // console.log(data);
-
   return (
     <section id="skills">
       <h2 className="skills__title container">Skills & Experience</h2>
