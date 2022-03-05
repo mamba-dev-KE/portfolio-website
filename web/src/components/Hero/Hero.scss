@@ -1,31 +1,7 @@
-.hero {
-  width: 100%;
-}
-
-.hero__hello {
-  font-size: 7vw;
-  font-weight: 900;
-
-  margin-block-start: 1.5em;
-
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-
-  color: hsl(0, 0%, 49%);
-}
-
-.hero__title {
-  color: black;
-  font-size: 10vw;
-  text-transform: uppercase;
-  line-height: 1.5;
-  letter-spacing: 0.3rem;
-}
-
 .hero__info {
   flex-direction: column;
   align-items: center;
-  margin-top: 5em;
+  margin-top: 3.5em;
   --gap: 1.5em;
 }
 
@@ -50,6 +26,28 @@
   @media (min-width: 1440px) {
     max-width: 55rem;
   }
+}
+
+.hero__hello {
+  font-size: 6vw;
+  font-weight: 700;
+
+  margin-block-start: 0.5rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+
+  color: hsl(0, 0%, 49%);
+}
+
+.hero__title {
+  color: black;
+  font-size: 8vw;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 0.3rem;
+
+  margin: 0;
 }
 
 .hero__hello,

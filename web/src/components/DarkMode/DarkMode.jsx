@@ -12,15 +12,31 @@ const DarkMode = () => {
   };
 
   const darkModeVariant = {
-    initial: { opacity: 0, scale: 0, y: 0 },
-    animate: { opacity: 1, scale: 1.5 },
-    transition: { duration: 0.5, ease: "easeIn" },
+    initial: { opacity: 0.8, scale: 1, rotate: 0 },
+    animate: {
+      opacity: 1,
+      scale: 1.25,
+      rotate: -10,
+      transition: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 2,
+        ease: "easeInOut",
+      },
+    },
     exit: { opacity: 0, y: -100 },
   };
 
   return (
-    <div className="dark-mode cursor" data-mode={isDark} onClick={handleClick}>
-      <div layout className="switch">
+    <motion.div
+      className="dark-mode cursor"
+      variants={darkModeVariant}
+      initial="initial"
+      animate="animate"
+      data-mode={isDark}
+      onClick={handleClick}
+    >
+      <div className="switch">
         <div>
           {!isDark ? (
             <FaMoon className="switch__moon" />
@@ -29,7 +45,7 @@ const DarkMode = () => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

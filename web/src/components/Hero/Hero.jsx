@@ -14,6 +14,7 @@ const Hero = () => {
       sanityHero {
         hello
         title
+        description
         heroImage {
           asset {
             gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
@@ -59,17 +60,18 @@ const Hero = () => {
     <section className="hero">
       <div className="hero__info container flex layout">
         <DarkMode />
+
         <div className="hero__avatar-container">
           <GatsbyImage
             image={gatsbyImageData}
             alt=""
             className="hero__avatar"
           />
-          {/* <img src={avatar} alt="" className="hero__avatar" /> */}
         </div>
 
         <p className="hero__hello">{data.sanityHero.hello}</p>
         <h1 className="hero__title">{data.sanityHero.title}</h1>
+        <p className="hero__description">{data.sanityHero.description}</p>
 
         <motion.div
           initial={{ y: "-100vh", opacity: 0 }}
