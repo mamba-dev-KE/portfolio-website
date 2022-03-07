@@ -1,17 +1,27 @@
+.hero {
+  position: relative;
+}
+
 .hero__info {
   flex-direction: column;
   align-items: center;
-  margin-top: 3.5em;
+  // margin-top: 3.5em;
+  margin-block-start: calc(var(--content-spacer) * 4);
   --gap: 1.5em;
 
   @media (min-width: 768px) {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 50%);
+    justify-items: center;
+    align-items: center;
   }
 }
 
 .hero__avatar-container {
   margin-inline: auto;
   z-index: -1;
+
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero__avatar {
@@ -33,30 +43,57 @@
 }
 
 .hero__hello {
-  font-size: 6vw;
+  font-size: 2.2rem;
   font-weight: 700;
 
-  margin-block-start: 0.5rem;
+  margin-block-start: calc(var(--content-spacer) - 0.5em);
 
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 
   color: hsl(0, 0%, 49%);
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+    margin-block-start: calc(var(--content-spacer));
+  }
 }
 
 .hero__title {
   color: black;
-  font-size: 8vw;
+
+  font-size: 2.6rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.4;
   letter-spacing: 0.3rem;
 
-  margin: 0;
+  @media (min-width: 768px) {
+    font-size: 2.7rem;
+  }
 }
 
 .hero__hello,
-.hero__title {
+.hero__title,
+.hero__description {
   text-align: center;
+  max-width: 28ch;
+  margin-inline: auto;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    margin-inline-start: 0;
+  }
+}
+
+.hero__description {
+  line-height: 1.7;
+  font-size: 1.4rem;
+  margin-block-start: 1em;
+  max-width: 40ch;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .hero__arrow-container {
@@ -66,15 +103,29 @@
   border-radius: 50%;
 
   background-color: hsl(var(--clr-primary));
+  border: 1px solid red;
   width: 4rem;
   height: 4rem;
   z-index: -1;
+
+  position: absolute;
+  bottom: 1.5%;
+  left: 50%;
+
+  transform: translate(-50%);
+
+  @media (min-width: 768px) {
+    bottom: 3%;
+    width: 6rem;
+    height: 6rem;
+  }
 }
 
 .hero__scroll {
   font-size: 3rem;
   color: white;
   animation: moveArrow 2.5s infinite forwards;
+  text-align: center;
 }
 
 @keyframes moveArrow {

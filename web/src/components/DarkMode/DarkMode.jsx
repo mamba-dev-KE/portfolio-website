@@ -28,24 +28,17 @@ const DarkMode = () => {
   };
 
   return (
-    <motion.div
-      className="dark-mode cursor"
-      variants={darkModeVariant}
-      initial="initial"
-      animate="animate"
-      data-mode={isDark}
-      onClick={handleClick}
-    >
-      <div className="switch">
+    <div className="dark-mode cursor" data-mode={isDark} onClick={handleClick}>
+      <div className="dark-mode__switch">
         <div>
           {!isDark ? (
-            <FaMoon className="switch__moon" />
+            <FaMoon className="dark-mode__switch-moon" />
           ) : (
-            <FaSun className="switch__sun" />
+            <FaSun className="dark-mode__switch-sun" />
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

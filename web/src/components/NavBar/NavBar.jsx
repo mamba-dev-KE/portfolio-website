@@ -18,7 +18,6 @@ const NavBar = () => {
     invinsible: { opacity: 0, y: -50, scale: 0.2 },
     visible: { opacity: 1, y: 0, x: 0, scale: 1 },
     transition: { type: "spring", stiffness: 200, ease: "easeIn" },
-    hover: { scale: 1.1, opacity: 0.9 },
   };
 
   const navVariant = {
@@ -43,7 +42,6 @@ const NavBar = () => {
           initial="invinsible"
           animate="visible"
           transition="transition"
-          whileHover="hover"
           className="header__logo cursor"
         >
           Joseph

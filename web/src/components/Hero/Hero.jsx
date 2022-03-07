@@ -1,6 +1,5 @@
 import React from "react";
 import "./Hero.scss";
-import avatar from "../../assets/images/avataaars.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowDown } from "@react-icons/all-files/bs/BsArrowDown";
 import { DarkMode } from "../../components";
@@ -66,9 +65,8 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero__info container flex layout">
-        <DarkMode />
-        <div className="hero__avatar-container">
+      <div className="hero__info container grid layout">
+        <div className="hero__avatar-container flex">
           <GatsbyImage
             image={gatsbyImageData}
             alt=""
@@ -76,13 +74,14 @@ const Hero = () => {
           />
         </div>
 
-        <p className="hero__hello">{data.sanityHero.hello}</p>
-        <h1 className="hero__title">{data.sanityHero.title}</h1>
-        <p className="hero__description">{data.sanityHero.description}</p>
-
-        <div className="hero__arrow-container">
-          <BsArrowDown className="hero__scroll" />
+        <div className="hero__text">
+          <p className="hero__hello">{data.sanityHero.hello}</p>
+          <h1 className="hero__title">{data.sanityHero.title}</h1>
+          <p className="hero__description">{data.sanityHero.description}</p>
         </div>
+      </div>
+      <div className="hero__arrow-container">
+        <BsArrowDown className="hero__scroll" />
       </div>
     </section>
   );
