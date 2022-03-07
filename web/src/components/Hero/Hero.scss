@@ -3,6 +3,10 @@
   align-items: center;
   margin-top: 3.5em;
   --gap: 1.5em;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .hero__avatar-container {

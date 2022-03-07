@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Hero = () => {
-  // graphql query for her data from sanity
+  // graphql query for hero data from sanity
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       sanityHero {
@@ -38,6 +38,7 @@ const Hero = () => {
       stiffness: 80,
     },
   };
+
   const avatarVariant = {
     initial: { y: -100, opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -56,11 +57,17 @@ const Hero = () => {
     transition: { duration: 1.5, ease: "easeIn" },
   };
 
+  const scrollVariant = {
+    initial: { y: "-100vh", opacity: 0 },
+    animate: { y: 0, opacity: 1, scale: 1.5 },
+    whileHover: { scale: 2 },
+    transition: { type: "spring", stiffness: 150, ease: "easeInOut" },
+  };
+
   return (
     <section className="hero">
       <div className="hero__info container flex layout">
         <DarkMode />
-
         <div className="hero__avatar-container">
           <GatsbyImage
             image={gatsbyImageData}
@@ -73,21 +80,9 @@ const Hero = () => {
         <h1 className="hero__title">{data.sanityHero.title}</h1>
         <p className="hero__description">{data.sanityHero.description}</p>
 
-        <motion.div
-          initial={{ y: "-100vh", opacity: 0 }}
-          animate={{ y: 0, opacity: 1, scale: 1.5 }}
-          whileHover={{
-            scale: 2,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 150,
-            ease: "easeInOut",
-          }}
-          className="hero__arrow-container"
-        >
+        <div className="hero__arrow-container">
           <BsArrowDown className="hero__scroll" />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
