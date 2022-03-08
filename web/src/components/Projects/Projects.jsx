@@ -31,7 +31,7 @@ const Projects = () => {
   console.log(projects);
 
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2 className="projects__title cursor">Projects</h2>
       <div className="projects__list container">
         {projects.map(project => (
