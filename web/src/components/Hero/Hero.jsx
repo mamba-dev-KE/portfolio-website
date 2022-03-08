@@ -79,8 +79,10 @@ const Hero = () => {
             <span className="hero__title">{data.sanityHero.title}</span>
           </p>
           <p className="hero__description">{data.sanityHero.description}</p>
+          <div className="hero__cto">
+            <CTO />
+          </div>
         </div>
-        <CTO />
       </div>
       <div className="hero__arrow-container cursor">
         <BsArrowDown className="hero__scroll" />

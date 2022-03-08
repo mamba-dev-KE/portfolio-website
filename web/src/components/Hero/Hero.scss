@@ -5,16 +5,11 @@
 }
 
 .hero__info {
-  flex-direction: column;
   align-items: center;
-  // margin-block-start: calc(var(--content-spacer));
-  // --gap: 1.5em;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, fit-content);
-    justify-items: center;
-    align-items: center;
+    align-items: start;
   }
 }
 
@@ -131,6 +126,19 @@
     bottom: 3%;
     width: 6rem;
     height: 6rem;
+  }
+}
+
+.hero__cto {
+  grid-column: 1 / span 12;
+  margin-block-start: var(--content-spacer);
+
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-column: 8 / span 5;
+    align-items: start;
   }
 }
 
