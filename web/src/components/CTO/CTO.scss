@@ -1,10 +1,29 @@
 .cto {
-  grid-column: 7 / -1;
-  margin-top: 1em;
+  grid-column: 1 / span 12;
+  margin-block-start: var(--content-spacer);
+
+  @media (min-width: 768px) {
+    grid-column: 8 / -1;
+  }
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: initial;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .cto__text {
   font-size: 2rem;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .cto__btn {
@@ -12,8 +31,9 @@
 
   border: 0;
   border-radius: 0.5rem;
+
   padding: 1.5em 3.5em;
-  margin-top: 1em;
+  margin-block-start: var(--content-spacer);
 
   background-color: hsl(var(--clr-primary));
 }

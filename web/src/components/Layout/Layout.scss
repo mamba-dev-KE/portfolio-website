@@ -6,17 +6,18 @@
   --clr-dark: 0 0% 0%;
   --clr-light: 100 100% 100%;
 
-  /* font-families */
+  /* Typography */
+  --ff-base-font-size: 10px;
   --ff-serif: --font-sans;
   --ff-sans-normal: "Roboto", sans-serif;
-
-  /* font-sizes */
   --font-size-title: 2.4rem;
+  --line-height: 1.7;
 
   /* content spacers*/
   --content-spacer: 2rem;
+  --padding-section: 6rem;
 
-  font-size: 10px;
+  font-size: var(--ff-base-font-size);
   scroll-behavior: smooth;
 }
 
@@ -40,7 +41,7 @@ img {
 }
 
 section {
-  padding-block: 4em;
+  padding-block: var(--padding-section);
 
   .about__title,
   .projects__title,

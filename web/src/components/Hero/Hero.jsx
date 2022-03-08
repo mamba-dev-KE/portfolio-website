@@ -74,11 +74,13 @@ const Hero = () => {
         </div>
 
         <div className="hero__text">
-          <p className="hero__hello">{data.sanityHero.hello}</p>
-          <h1 className="hero__title">{data.sanityHero.title}</h1>
+          <p className="hero__hello">
+            {data.sanityHero.hello}
+            <span className="hero__title">{data.sanityHero.title}</span>
+          </p>
           <p className="hero__description">{data.sanityHero.description}</p>
-          <CTO />
         </div>
+        <CTO />
       </div>
       <div className="hero__arrow-container cursor">
         <BsArrowDown className="hero__scroll" />

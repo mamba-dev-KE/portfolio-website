@@ -12,5 +12,5 @@
 
 .about__info {
   margin-block-start: 2em;
-  line-height: 1.6;
+  line-height: calc(var(--line-height) - 0.1);
 }
