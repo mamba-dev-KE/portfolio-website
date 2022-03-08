@@ -7,14 +7,12 @@ const Skills = () => {
   const data = useStaticQuery(graphql`
     query SkillsQuery {
       allSanitySkills {
-        edges {
-          node {
-            _id
-            technologyName
-            icon {
-              asset {
-                gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
-              }
+        nodes {
+          _id
+          technologyName
+          icon {
+            asset {
+              gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
             }
           }
         }
@@ -22,20 +20,20 @@ const Skills = () => {
     }
   `);
 
-  const skillsIcons = data.allSanitySkills.edges;
+  const skills = data.allSanitySkills.nodes;
 
   return (
     <section id="skills" className="skills">
       <h2 className="skills__title container">Skills</h2>
       <div className="skills__list container">
-        {skillsIcons.map(skill => (
-          <article className="skill__item cursor" key={skill.node._id}>
+        {skills.map(skill => (
+          <article className="skill__item cursor" key={skill._id}>
             <GatsbyImage
-              image={skill.node.icon.asset.gatsbyImageData}
+              image={skill.icon.asset.gatsbyImageData}
               className="skill__icon"
-              alt={skill.node.technologyName}
+              alt={skill.technologyName}
             />
-            <div className="skill__name">{skill.node.technologyName}</div>
+            <div className="skill__name">{skill.technologyName}</div>
           </article>
         ))}
       </div>

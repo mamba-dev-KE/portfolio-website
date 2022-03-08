@@ -1,0 +1,36 @@
+.projects {
+  background-color: darkgray;
+  min-height: 100vh;
+}
+
+.project__item {
+  border: 1px solid greenyellow;
+}
+
+.project__info {
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.project__description {
+  grid-column: 1 / span 12;
+
+  @media (min-width: 1000px) {
+    grid-column: 1 / span 6;
+  }
+}
+
+.project__images {
+  grid-column: 1 / span 12;
+
+  .project__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 1000px) {
+    grid-column: 8 / -1;
+    grid-row: 1 / 4;
+  }
+}

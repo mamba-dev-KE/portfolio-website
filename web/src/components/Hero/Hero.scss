@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  height: 100vh;
 }
 
 .hero__info {
@@ -10,7 +11,8 @@
   --gap: 1.5em;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, fit-content);
     justify-items: center;
     align-items: center;
   }
@@ -22,6 +24,12 @@
 
   flex-direction: column;
   align-items: center;
+
+  grid-column: 1 / span 12;
+
+  @media (min-width: 768px) {
+    grid-column: 1 / span 6;
+  }
 }
 
 .hero__avatar {
@@ -39,6 +47,14 @@
 
   @media (min-width: 1440px) {
     max-width: 55rem;
+  }
+}
+
+.hero__text {
+  grid-column: 1 / span 12;
+
+  @media (min-width: 768px) {
+    grid-column: 8 / span 6;
   }
 }
 
@@ -76,7 +92,7 @@
 .hero__title,
 .hero__description {
   text-align: center;
-  max-width: 28ch;
+  max-width: 30ch;
   margin-inline: auto;
 
   @media (min-width: 768px) {
@@ -89,7 +105,7 @@
   line-height: 1.7;
   font-size: 1.4rem;
   margin-block-start: 1em;
-  max-width: 40ch;
+  max-width: 50ch;
 
   @media (min-width: 768px) {
     font-size: 2rem;

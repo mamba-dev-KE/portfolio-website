@@ -1,0 +1,28 @@
+.cto {
+  grid-column: 7 / -1;
+  margin-top: 1em;
+}
+
+.cto__text {
+  font-size: 2rem;
+}
+
+.cto__btn {
+  font-size: 2rem;
+
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 1.5em 3.5em;
+  margin-top: 1em;
+
+  background-color: hsl(var(--clr-primary));
+}
+
+.cto__btn:hover {
+  cursor: pointer;
+}
+
+.cto__btn-link {
+  color: hsl(var(--clr-light));
+  text-decoration: none;
+}

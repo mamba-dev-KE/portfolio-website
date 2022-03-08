@@ -20,5 +20,10 @@ export default {
       title: "Project Thumbnail",
       type: "image",
     },
+    {
+      name: "projectThumbnailOther",
+      title: "Project Thumbnail Other",
+      type: "image",
+    },
   ],
 };

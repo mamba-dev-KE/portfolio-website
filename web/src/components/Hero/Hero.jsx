@@ -5,6 +5,7 @@ import { BsArrowDown } from "@react-icons/all-files/bs/BsArrowDown";
 import { DarkMode } from "../../components";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import CTO from "../CTO/CTO";
 
 const Hero = () => {
   // graphql query for hero data from sanity
@@ -24,8 +25,6 @@ const Hero = () => {
   `);
 
   const { gatsbyImageData } = data.sanityHero.heroImage.asset;
-
-  console.log();
 
   // hero animation variants
   const heroVariant = {
@@ -78,9 +77,10 @@ const Hero = () => {
           <p className="hero__hello">{data.sanityHero.hello}</p>
           <h1 className="hero__title">{data.sanityHero.title}</h1>
           <p className="hero__description">{data.sanityHero.description}</p>
+          <CTO />
         </div>
       </div>
-      <div className="hero__arrow-container">
+      <div className="hero__arrow-container cursor">
         <BsArrowDown className="hero__scroll" />
       </div>
     </section>

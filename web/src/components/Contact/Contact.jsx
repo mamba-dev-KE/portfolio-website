@@ -15,11 +15,9 @@ const Contact = () => {
     }
   `);
 
-  console.log(data.sanityContact.video.asset);
-
   return (
     <section id="contact" className="contact">
-      <h2>Contact</h2>
+      <h2 className="contact__title">Contact</h2>
       <video controls>
         <source url={data.sanityContact.video.asset} type="video/mp4" />
       </video>

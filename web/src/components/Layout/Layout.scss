@@ -10,6 +10,10 @@
   --ff-serif: --font-sans;
   --ff-sans-normal: "Roboto", sans-serif;
 
+  /* font-sizes */
+  --font-size-title: 2.4rem;
+
+  /* content spacers*/
   --content-spacer: 2rem;
 
   font-size: 10px;
@@ -38,10 +42,35 @@ img {
 section {
   padding-block: 4em;
 
-  h2 {
-    font-size: 6.5vw;
+  .about__title,
+  .projects__title,
+  .skills__title,
+  .contact__title {
+    font-size: var(--font-size-title);
     text-align: center;
     text-transform: uppercase;
+
+    display: grid;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      font-size: calc(var(--font-size-title) + 0.8vw);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: 2px solid hsl(var(--clr-primary));
+      opacity: 0;
+      transition: opacity 200ms ease-in-out;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -60,7 +89,7 @@ section {
 }
 
 .container {
-  max-width: 230rem;
+  max-width: 140rem;
   width: calc(100% - 3.5rem);
   margin-inline: auto;
 }

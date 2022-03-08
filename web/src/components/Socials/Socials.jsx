@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const Socials = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query SocialsQuery {
       allSanitySocials {
         nodes {
           link
