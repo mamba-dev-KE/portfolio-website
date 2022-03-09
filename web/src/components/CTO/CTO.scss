@@ -8,12 +8,12 @@
 }
 
 .cto__btn {
-  font-size: 1.6rem;
+  // font-size: 2rem;
 
   border: 0;
   border-radius: 1rem;
 
-  padding: 1.4em 2em;
+  padding: 1.2em 1.8em;
   margin-block-start: var(--content-spacer);
 
   border: 2px solid hsl(var(--clr-primary));
@@ -42,6 +42,15 @@
 .cto__btn-link {
   color: hsl(var(--clr-dark));
   text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+
+  @media (min-width: 768px) {
+    justify-items: start;
+    align-content: start;
+    font-size: 2rem;
+  }
 }
 
 .cto__arrow {
