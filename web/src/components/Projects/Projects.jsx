@@ -28,7 +28,6 @@ const Projects = () => {
   `);
 
   const projects = data.allSanityProjects.nodes;
-  console.log(projects);
 
   return (
     <section className="projects" id="projects">

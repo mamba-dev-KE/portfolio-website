@@ -1,6 +1,8 @@
 export { default as About } from "./About/About";
 export { default as Contact } from "./Contact/Contact";
+export { default as CTO } from "./CTO/CTO";
 export { default as DarkMode } from "./DarkMode/DarkMode";
+export { default as Flag } from "./Flag/Flag";
 export { default as Footer } from "./Footer/Footer";
 export { default as Hero } from "./Hero/Hero";
 export { default as Layout } from "./Layout/Layout";

@@ -4,6 +4,7 @@ export default {
   type: "document",
   fields: [
     { name: "title", title: "Title", type: "string" },
-    { name: "video", title: "Video", type: "file" },
+    { name: "contactImage", title: "Contact Image", type: "image" },
+    { name: "flagImage", title: "Flag Image", type: "image" },
   ],
 };

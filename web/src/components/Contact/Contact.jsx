@@ -1,26 +1,31 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import "./Contact.scss";
+import { Flag } from "../../components";
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
-    query VideoQuery {
+    query ContactQuery {
       sanityContact {
-        video {
+        contactImage {
           asset {
-            url
+            gatsbyImageData(placeholder: BLURRED, fit: FILLMAX)
           }
         }
       }
     }
   `);
 
+  const { gatsbyImageData } = data.sanityContact.contactImage.asset;
+
   return (
     <section id="contact" className="contact">
       <h2 className="contact__title">Contact</h2>
-      <video controls>
-        <source url={data.sanityContact.video.asset} type="video/mp4" />
-      </video>
+      <div className="contact__bg">
+        <GatsbyImage image={gatsbyImageData} alt="" />
+      </div>
+      <Flag />
     </section>
   );
 };

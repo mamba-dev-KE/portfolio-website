@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@fontsource/nunito": "^4.5.4",
     "@fontsource/parisienne": "^4.5.2",
     "@fontsource/roboto": "^4.5.3",
     "@react-icons/all-files": "^4.1.0",
