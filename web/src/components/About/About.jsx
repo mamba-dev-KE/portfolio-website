@@ -1,25 +1,33 @@
 import React from "react";
 import "./About.scss";
-import { StaticQuery, graphql } from "gatsby";
-import bgImg from "../../assets/images/inn.svg";
+import { graphql, useStaticQuery } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 const About = () => {
+  const data = useStaticQuery(graphql`
+    query AboutQuery {
+      sanityAbout {
+        description
+        about
+      }
+    }
+  `);
+  const { description, about } = data.sanityAbout;
+
   return (
     <section className="about" id="about">
-      <h2 className="about__title container">About</h2>
-      <div className="about__info container">
-        <p className="about__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-          asperiores tempore excepturi voluptatibus dignissimos aliquam sapiente
-          nobis maxime culpa unde voluptates amet voluptatem alias, eveniet quam
-          at facere fugiat, optio, assumenda provident cumque deleniti. Dolores
-          maiores similique voluptatum quaerat. Doloremque accusamus sunt a! Hic
-          veniam officiis ipsam suscipit. Deserunt, error dolores! Explicabo
-          voluptatem architecto suscipit quis temporibus doloribus ducimus iste
-          error illo magnam aliquid, necessitatibus sint magni id, quasi
-          mollitia, maiores optio consectetur reprehenderit quibusdam earum
-          ipsum? Officia, excepturi quis?
-        </p>
+      <h2 className="about__title container">{about}</h2>
+      <div className="about__container grid">
+        <div className="about__info container">
+          <p className="about__text">{description}</p>
+        </div>
+        <div className="about__img">
+          <StaticImage
+            src="https://doodleipsum.com/1000/flat?i=5f1b9a5210e95d07ddbe257c32a24725"
+            alt=""
+            placeholder="blurred"
+          />
+        </div>
       </div>
     </section>
   );

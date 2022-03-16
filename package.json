@@ -11,7 +11,9 @@
     "deploy": "lerna run deploy",
     "init": "cd studio && sanity init && lerna run graphql-deploy",
     "sanity-deploy": "lerna run sanity-deploy",
-    "start": "lerna run empty-cache && lerna run start --parallel"
+    "start": "lerna run empty-cache && lerna run start --parallel",
+    "redeploy": "cd studio && npm run deploy",
+    "dev": "npm run redeploy && npm run start"
   },
   "devDependencies": {
     "lerna": "^4.0.0"

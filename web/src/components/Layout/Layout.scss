@@ -1,6 +1,8 @@
 :root {
   /* colors */
   --clr-primary: 0 100% 68%;
+  --clr-secondary: 137 100%, 29%;
+  --clr-secondary-accent: 137 77% 52%;
   --clr-dark: 0 0% 0%;
   --clr-light: 100 100% 100%;
 
@@ -13,7 +15,7 @@
   --line-height: 1.7;
 
   /* content spacers*/
-  --content-spacer: 2rem;
+  --content-spacer: 3rem;
   --padding-section: 6rem;
 
   font-size: var(--ff-base-font-size);
@@ -32,11 +34,13 @@
 body {
   font-size: 1.6rem;
   font-family: var(--ff-sans-normal);
+
+  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
-  // display: block;
+  display: block;
 }
 
 section {

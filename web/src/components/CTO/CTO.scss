@@ -8,15 +8,13 @@
 }
 
 .cto__btn {
-  // font-size: 2rem;
-
   border: 0;
   border-radius: 1rem;
 
   padding: 1.2em 1.8em;
-  margin-block-start: var(--content-spacer);
+  margin-block-start: calc(var(--content-spacer) / 2);
 
-  border: 2px solid hsl(var(--clr-primary));
+  border: 4px solid hsl(var(--clr-primary));
   background-color: transparent;
 
   align-items: center;
@@ -24,18 +22,20 @@
   transition: all 250ms ease-in-out;
 }
 
-.cto__btn:hover {
-  cursor: pointer;
-  background-color: hsl(var(--clr-primary));
-  color: white;
+@media (min-width: 768px) {
+  .cto__btn:hover {
+    cursor: pointer;
+    background-color: hsl(var(--clr-primary));
+    color: hsl(var(--clr-light));
 
-  .cto__btn-link {
-    color: white;
-    text-decoration: none;
-  }
+    .cto__btn-link {
+      color: hsl(var(--clr-light));
+      text-decoration: none;
+    }
 
-  .cto__arrow {
-    transform: scale(1.3) translateX(10px);
+    .cto__arrow {
+      transform: scale(1.3) translateX(10px);
+    }
   }
 }
 

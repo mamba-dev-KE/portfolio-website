@@ -1,7 +1,9 @@
 .hero {
   position: relative;
+  min-height: 85vh;
   padding-block-end: 12rem;
-  // height: 100vh;
+
+  place-items: center;
 }
 
 .hero__info {
@@ -97,7 +99,7 @@
   font-size: 1.75rem;
   max-width: 50ch;
 
-  margin-block-start: calc(var(--content-spacer));
+  margin-block-start: calc(var(--content-spacer));  
 
   @media (min-width: 768px) {
     font-size: 2rem;
@@ -110,7 +112,6 @@
 
   background-color: hsl(var(--clr-primary));
   border-radius: 50%;
-  border: 1px solid red;
 
   width: 5rem;
   height: 5rem;
@@ -131,7 +132,7 @@
 
 .hero__cto {
   grid-column: 1 / span 12;
-  margin-block-start: var(--content-spacer);
+  margin-block-start: calc(var(--content-spacer) + 1rem);
 
   flex-direction: column;
   align-items: center;

@@ -1,7 +1,6 @@
 .about {
-  color: black;
-  height: 100vh;
-  background-color: rgb(236, 232, 232);
+  color: white;
+  background-color: #727c75;
 }
 
 .about__title {
@@ -10,7 +9,48 @@
   text-transform: uppercase;
 }
 
+.about__container {
+  justify-items: center;
+  --gap: 4em;
+
+  @media (min-width: 1250px) {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: start;
+  }
+}
+
 .about__info {
   margin-block-start: 2em;
   line-height: calc(var(--line-height) - 0.1);
+  grid-column: 1 / span 6;
+
+  @media (min-width: 1250px) {
+    list-style: var(--line-height);
+    grid-column: 2 / span 2;
+  }
+}
+
+.about__text {
+  font-size: 1.75rem;
+  max-width: 66ch;
+  margin-inline: auto;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    max-width: 60ch;
+  }
+
+  span {
+    color: red;
+  }
+}
+
+.about__img {
+  width: 90%;
+  grid-column: 1 / span 6;
+
+  @media (min-width: 1250px) {
+    grid-column: 4 / -1;
+  }
 }

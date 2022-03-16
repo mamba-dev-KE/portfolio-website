@@ -14,6 +14,14 @@ const NavBar = () => {
   };
 
   /* animation Variants */
+  const headerVariant = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: {
+      duration: 0.35,
+    },
+  };
+
   const mountVariant = {
     invinsible: { opacity: 0, y: -50, scale: 0.2 },
     visible: { opacity: 1, y: 0, x: 0, scale: 1 },
@@ -21,84 +29,43 @@ const NavBar = () => {
   };
 
   const navVariant = {
-    invinsible: { y: "-100vh", opacity: 0, scale: 0.8 },
-    visible: { y: 0, opacity: 1, scale: 1 },
-    exit: { rotate: 50, scale: 0.2, y: "100vh", opacity: 0 },
+    visible: { x: 0 },
+    exit: { opacity: 0, x: "-100vw" },
     transition: { type: "spring", delay: 1, stiffness: 200, ease: "easeInOut" },
   };
 
   return (
-    <motion.header
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: 0.35,
-      }}
-      className="header flex"
-    >
+    <header className="header flex">
       <div className="header__container flex">
-        <motion.span
-          variants={mountVariant}
-          initial="invinsible"
-          animate="visible"
-          transition="transition"
-          className="header__logo cursor"
-        >
-          Joseph
-        </motion.span>
-
-        <AnimatePresence exitBeforeEnter={true} initial={true}>
-          <motion.nav
-            variants={navVariant}
-            initial="invinsible"
-            animate={isOpen ? "visible" : ""}
-            transition="transition"
-            exit="exit"
-            className="nav grid"
-          >
-            <ul className="nav__list flex">
-              {["Home", "About", "Projects", "Skills", "Contact"].map(
-                listItem => (
-                  <motion.li
-                    whileHover={{
-                      opacity: 0.9,
-                      textShadow: "1px 0 6px var(--red-8)",
-                    }}
-                    transition={{ duration: 0.05, ease: "easeOut" }}
-                    className="cursor"
-                    key={listItem}
+        <span className="header__logo cursor">Joseph</span>
+        <nav className={isOpen ? "nav grid open" : "nav grid"}>
+          <ul className="nav__list flex">
+            {["Home", "About", "Projects", "Skills", "Contact"].map(
+              listItem => (
+                <li className="cursor" key={listItem}>
+                  <a
+                    href={`#${listItem.toLocaleLowerCase()}`}
+                    onClick={handleClick}
+                    className="nav__link"
                   >
-                    <a
-                      href={`#${listItem.toLocaleLowerCase()}`}
-                      onClick={handleClick}
-                      className="nav__link"
-                    >
-                      {listItem}
-                    </a>
-                  </motion.li>
-                )
-              )}
-            </ul>
-            <Socials />
-          </motion.nav>
-        </AnimatePresence>
-        <motion.button
-          variants={mountVariant}
-          initial="invinsible"
-          animate="visible"
-          transition="transition"
-          whileHover="hover"
-          className="header__menu cursor"
-          onClick={handleClick}
-        >
+                    {listItem}
+                  </a>
+                </li>
+              )
+            )}
+          </ul>
+          <Socials />
+        </nav>
+
+        <button className="header__menu cursor" onClick={handleClick}>
           {isOpen ? (
             <AiOutlineClose className="header__menu-icon header__menu-icon--close" />
           ) : (
             <AiOutlineMenu className="header__menu-icon" />
           )}
-        </motion.button>
+        </button>
       </div>
-    </motion.header>
+    </header>
   );
 };
 
