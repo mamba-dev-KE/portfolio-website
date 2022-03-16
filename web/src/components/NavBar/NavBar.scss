@@ -5,12 +5,10 @@
 
   background-color: hsl(var(--clr-primary) / 0.9);
   backdrop-filter: blur(3px);
-  // opacity: 0.1;
+
   opacity: 1;
 
   position: sticky;
-
-  // overflow: hidden;
 
   width: 100%;
   height: 75px;
@@ -52,15 +50,12 @@
     opacity: 0.5;
 
     position: absolute;
-    top: 0;
-    right: -100vw;
+    inset: 0;
     height: 100vh;
     width: 100%;
     padding: 4em 0 0 2em;
 
     background-color: hsl(0 0% 0%);
-
-    transition: all 500ms ease-in;
 
     .nav__list {
       flex-direction: column;
@@ -95,13 +90,6 @@
         cursor: pointer;
       }
     }
-  }
-
-  .nav.open {
-    inset: 0;
-    opacity: 1;
-
-    transition: all 500ms ease;
   }
 
   .header__menu {

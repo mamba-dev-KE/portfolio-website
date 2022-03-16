@@ -25,20 +25,37 @@ const NavBar = () => {
   const mountVariant = {
     invinsible: { opacity: 0, y: -50, scale: 0.2 },
     visible: { opacity: 1, y: 0, x: 0, scale: 1 },
-    transition: { type: "spring", stiffness: 200, ease: "easeIn" },
+    transition: { type: "spring", stiffness: 1000, ease: "easeIn" },
   };
 
   const navVariant = {
-    visible: { x: 0 },
+    hidden: { opacity: 0.2, x: "100vw" },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        stiffness: 200,
+      },
+    },
+    transition: { type: "spring", stiffness: 1000, ease: "easeIn" },
+
     exit: { opacity: 0, x: "-100vw" },
-    transition: { type: "spring", delay: 1, stiffness: 200, ease: "easeInOut" },
   };
+
+  //  transition: { type: "spring", delay: 1, stiffness: 200, ease: "easeInOut" },
 
   return (
     <header className="header flex">
       <div className="header__container flex">
         <span className="header__logo cursor">Joseph</span>
-        <nav className={isOpen ? "nav grid open" : "nav grid"}>
+        <motion.nav
+          variants={navVariant}
+          initial="hidden"
+          animate={isOpen ? "visible" : ""}
+          transition="transition"
+          exit="exit"
+          className="nav grid"
+        >
           <ul className="nav__list flex">
             {["Home", "About", "Projects", "Skills", "Contact"].map(
               listItem => (
@@ -55,7 +72,7 @@ const NavBar = () => {
             )}
           </ul>
           <Socials />
-        </nav>
+        </motion.nav>
 
         <button className="header__menu cursor" onClick={handleClick}>
           {isOpen ? (
