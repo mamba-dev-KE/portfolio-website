@@ -7,6 +7,10 @@
   margin-block-end: 2em;
 
   place-items: center;
+
+  @media (min-width: 1200px) {
+    min-height: 93vh;
+  }
 }
 
 .hero__info {
