@@ -83,9 +83,10 @@ const Hero = () => {
             <CTO />
           </div>
         </div>
-      </div>
-      <div className="hero__arrow-container cursor">
-        <BsArrowDown className="hero__scroll" />
+
+        <div className="hero__arrow-container cursor">
+          <BsArrowDown className="hero__scroll" />
+        </div>
       </div>
     </section>
   );

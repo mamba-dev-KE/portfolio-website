@@ -8,7 +8,7 @@
 
   opacity: 1;
 
-  position: sticky;
+  position: fixed;
 
   width: 100%;
   height: 75px;
@@ -46,16 +46,20 @@
     align-content: space-evenly;
     grid-gap: 10rem;
 
-    z-index: -1;
-    opacity: 0.5;
+    top: 0;
+    right: 0;
 
-    position: absolute;
-    inset: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    z-index: -1;
+
+    background-color: black;
+    color: white;
+
+    position: fixed;
     padding: 4em 0 0 2em;
 
-    background-color: hsl(0 0% 0%);
+    background-color: hsl(var(--clr-dark));
 
     .nav__list {
       flex-direction: column;
@@ -107,6 +111,6 @@
   }
 
   .header__menu-icon--close {
-    color: white;
+    color: hsl(var(--clr-light));
   }
 }

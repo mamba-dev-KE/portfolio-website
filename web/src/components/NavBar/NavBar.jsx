@@ -39,7 +39,7 @@ const NavBar = () => {
     },
     transition: { type: "spring", stiffness: 1000, ease: "easeIn" },
 
-    exit: { opacity: 0, x: "-100vw" },
+    exit: { opacity: 0, x: "-100vw", scale: 0 },
   };
 
   //  transition: { type: "spring", delay: 1, stiffness: 200, ease: "easeInOut" },

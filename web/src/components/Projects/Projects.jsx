@@ -1,6 +1,6 @@
 import React from "react";
 import "./Projects.scss";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Projects = () => {
@@ -36,15 +36,19 @@ const Projects = () => {
         {projects.map(project => (
           <article className="project__item" key={project._id}>
             <h3>{project.projectName}</h3>
-            <div className="project__info">
+            <div className="project__info flex">
               <p className="project__description">
-                {project.projectDescription}
+                {project.projectDescription.slice(0, 400)}
+                <span>
+                  <Link to="/"> Read more...</Link>
+                </span>
               </p>
               <div className="project__images">
                 <GatsbyImage
                   image={project.projectThumbnail.asset.gatsbyImageData}
-                  className="project__image"
+                  className="project__img"
                   alt={project.projectName}
+                  objectFit="cover"
                 />
               </div>
               <div className="project__tech-list">
