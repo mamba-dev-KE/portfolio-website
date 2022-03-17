@@ -21,11 +21,8 @@ const Contact = () => {
     <section id="contact" className="contact">
       <h2 className="contact__title">Contact</h2>
       <div className="contact__container grid">
-        <div className="contact__form grid">
+        <div className="contact__form">
           <Form />
-        </div>
-        <div className="contact__img">
-          <StaticImage src="../../assets/images/contact.png" alt="" />
         </div>
       </div>
     </section>

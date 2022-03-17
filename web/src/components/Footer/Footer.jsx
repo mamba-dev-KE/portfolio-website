@@ -12,14 +12,6 @@ const Footer = () => {
         <div className="footer__socials">
           <Socials />
         </div>
-        <div className="footer__attribution">
-          <span>
-            Hand Icon by
-            <a href="https://icons8.com/l/3d-hands/" target="_blank">            
-              icons8.com
-            </a>
-          </span>
-        </div>
       </div>
     </footer>
   );
