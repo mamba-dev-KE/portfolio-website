@@ -13,5 +13,9 @@
 }
 
 .contact__form {
-  width: 40%;
+  width: 100%;
+
+  @media (min-width: 850px) {
+    max-width: 75rem;
+  }
 }
