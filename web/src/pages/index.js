@@ -23,7 +23,7 @@ export default function Home() {
           <Skills />
           <Contact />
         </Layout>
-        {/* <Footer /> */}
+        <Footer />
       </React.StrictMode>
     </>
   );

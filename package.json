@@ -13,7 +13,7 @@
     "sanity-deploy": "lerna run sanity-deploy",
     "start": "lerna run empty-cache && lerna run start --parallel",
     "redeploy": "cd studio && npm run deploy",
-    "dev": "npm run redeploy && npm run start"
+    "dev": "npm run redeploy && npm run start --parallel"
   },
   "devDependencies": {
     "lerna": "^4.0.0"

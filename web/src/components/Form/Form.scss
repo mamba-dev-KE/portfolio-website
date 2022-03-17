@@ -1,0 +1,55 @@
+.form {
+  inset-block-start: 50%;
+  inset: 0;
+
+  padding-block: 1em;
+  z-index: 1;
+
+  input,
+  textarea {
+    width: 100%;
+    border: 0;
+
+    border-radius: 0.5rem;
+    margin-block-start: 0.8em;
+    padding-inline: 1em;
+
+    &:focus {
+      outline: 2px solid hsl(var(--clr-dark) / 0.75);
+    }
+  }
+
+  textarea {
+    padding-block: 1em;
+  }
+
+  input {
+    min-height: 5rem;
+  }
+
+  label {
+    margin-block-start: 2em;
+    color: hsl(var(--clr-dark));
+    font-weight: 700;
+
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.form > * {
+  display: block;
+}
+
+.form__btn {
+  padding: 1em 1.5em;
+  border: 2px solid hsl(var(--clr-primary));
+  margin-block-start: 2em;
+  border-radius: 1rem;
+
+  color: hsl(var(--clr-dark));
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
