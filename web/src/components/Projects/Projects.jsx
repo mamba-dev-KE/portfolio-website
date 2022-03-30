@@ -38,11 +38,14 @@ const Projects = () => {
             <h3>{project.projectName}</h3>
             <div className="project__info flex">
               <p className="project__description">
+                {project.projectDescription}               
+              </p>
+              {/* <p className="project__description">
                 {project.projectDescription.slice(0, 400)}
                 <span>
                   <Link to="/"> Read more...</Link>
                 </span>
-              </p>
+              </p> */}
               <div className="project__images">
                 <GatsbyImage
                   image={project.projectThumbnail.asset.gatsbyImageData}
