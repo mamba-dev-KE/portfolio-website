@@ -3,6 +3,16 @@ import emailjs from "@emailjs/browser";
 import "./Form.scss";
 
 const Form = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = e => {
+    setFormData({ name: e.target.value });
+  };
+
   const [isDone, setIsDone] = useState(false);
   // setup email service
   const form = useRef();
@@ -41,6 +51,8 @@ const Form = () => {
             id="names"
             placeholder="Names"
             required
+            value={FormData.names}
+            onChange={handleChange}
           />
         </label>
 
@@ -52,19 +64,28 @@ const Form = () => {
             id="email"
             placeholder="Email"
             required
+            value={FormData.email}
           />
         </label>
 
         <label htmlFor="message">
           Message: <br />
-          <textarea name="message" rows={15} placeholder="Message" required />
+          <textarea
+            name="message"
+            rows={15}
+            placeholder="Message"
+            required
+            value={FormData.message}
+          />
         </label>
         <button className="form__btn cursor">Submit</button>
+        <span className="form__success">
+          {isDone &&
+            "Email successfully sent! Sit tight, I will get back to you as soon as possible."}
+        </span>
+
+        {formData.name}
       </form>
-      <div>
-        {isDone &&
-          "Email successfully sent! Sit tight, I will get back to you as soon as possible."}
-      </div>
     </>
   );
 };

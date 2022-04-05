@@ -52,4 +52,10 @@
   font-weight: 700;
 
   letter-spacing: 0.2em;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: hsl(var(--clr-primary));
+    color: hsl(var(--clr-light));
+  }
 }
