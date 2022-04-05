@@ -2,7 +2,6 @@ import React from "react";
 import "./Contact.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import Form from "../Form/Form";
-import { StaticImage } from "gatsby-plugin-image";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`

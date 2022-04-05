@@ -38,7 +38,7 @@ const Projects = () => {
             <h3>{project.projectName}</h3>
             <div className="project__info flex">
               <p className="project__description">
-                {project.projectDescription}               
+                {project.projectDescription}
               </p>
               {/* <p className="project__description">
                 {project.projectDescription.slice(0, 400)}

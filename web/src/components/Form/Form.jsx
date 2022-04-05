@@ -1,33 +1,41 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./Form.scss";
 
 const Form = () => {
-  const [contact, setContact] = useState({
-    names: "",
-    email: "",
-    message: "",
-  });
+  // setup email service
+  const form = useRef();
 
-  const handleChange = e => {
-    const { name, value } = e.target;
+  const sendEmail = e => {
+    e.preventDefault();
 
-    setContact(prevState => ({ ...prevState, [name]: value }));
+    emailjs
+      .sendForm(
+        "service_kywqap9",
+        "template_ufmg2hv",
+        form.current,
+        "LgXanrVAxwloe1d5Y"
+      )
+      .then(
+        result => {
+          console.log(result.text);
+        },
+        error => {
+          console.log(error.text);
+        }
+      );
   };
 
-  const handleSubmit = () => {};
-
   return (
-    <form onSubmit={handleSubmit} className="form" autoComplete="off">
+    <form ref={form} onSubmit={sendEmail} className="form" autoComplete="off">
       <label htmlFor="names">
         Full Names: <br />
         <input
           type="text"
           name="names"
           id="names"
-          placeholder="Enter your names"
+          placeholder="Names"
           required
-          value={contact.names}
-          onChange={handleChange}
         />
       </label>
 
@@ -37,22 +45,14 @@ const Form = () => {
           type="email"
           name="email"
           id="email"
-          placeholder="Enter your email"
+          placeholder="Email"
           required
-          value={contact.email}
-          onChange={handleChange}
         />
       </label>
 
       <label htmlFor="message">
         Message: <br />
-        <textarea
-          value={contact.message}
-          onChange={handleChange}
-          name="Enter your message..."
-          rows={15}
-          placeholder="Message"
-        />
+        <textarea name="message" rows={15} placeholder="Message" required />
       </label>
       <button className="form__btn cursor">Submit</button>
     </form>
