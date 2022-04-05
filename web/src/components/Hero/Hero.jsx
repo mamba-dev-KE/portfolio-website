@@ -63,7 +63,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero grid">
+    <section className="hero grid" id="home">
       <div className="hero__info container grid layout">
         <div className="hero__avatar-container flex">
           <GatsbyImage

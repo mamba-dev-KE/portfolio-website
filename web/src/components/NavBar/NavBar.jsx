@@ -4,6 +4,8 @@ import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { motion, AnimatePresence } from "framer-motion";
 import { Socials } from "../../components";
+import DarkMode from "../DarkMode/DarkMode";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [isOpen, setisOpen] = React.useState(false);
@@ -48,6 +50,7 @@ const NavBar = () => {
     <header className="header flex">
       <div className="header__container flex">
         <span className="header__logo cursor">Joseph</span>
+        <DarkMode />
         <motion.nav
           variants={navVariant}
           initial="hidden"
@@ -59,15 +62,16 @@ const NavBar = () => {
           <ul className="nav__list flex">
             {["Home", "About", "Projects", "Skills", "Contact"].map(
               listItem => (
-                <li className="cursor" key={listItem}>
-                  <a
-                    href={`#${listItem.toLocaleLowerCase()}`}
-                    onClick={handleClick}
-                    className="nav__link"
-                  >
+                <Link
+                  spy={true}
+                  to={listItem.toLowerCase()}
+                  smooth={true}
+                  activeClass="activeClass"
+                >
+                  <li className="cursor" key={listItem} onClick={handleClick}>
                     {listItem}
-                  </a>
-                </li>
+                  </li>
+                </Link>
               )
             )}
           </ul>
