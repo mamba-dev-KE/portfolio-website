@@ -65,6 +65,8 @@ const NavBar = () => {
                 <Link
                   spy={true}
                   to={listItem.toLowerCase()}
+                  offset={-60}
+                  duration={500}
                   smooth={true}
                   activeClass="activeClass"
                 >
