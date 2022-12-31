@@ -13,7 +13,6 @@ import {
 
 export default function Home() {
   return (
-    <>
       <React.StrictMode>
         <NavBar />
         <Layout>
@@ -25,6 +24,5 @@ export default function Home() {
         </Layout>
         <Footer />
       </React.StrictMode>
-    </>
   );
 }
