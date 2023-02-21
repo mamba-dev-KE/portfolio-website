@@ -1,11 +1,11 @@
 import React from "react";
-import "./NavBar.scss";
 import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Socials } from "../../components";
 import DarkMode from "../DarkMode/DarkMode";
 import { Link } from "react-scroll";
+import "./NavBar.scss";
 
 const NavBar = () => {
   const [isOpen, setisOpen] = React.useState(false);
@@ -50,7 +50,7 @@ const NavBar = () => {
     <header className="header flex">
       <div className="header__container flex">
         <span className="header__logo cursor">Joseph</span>
-        <DarkMode />
+        {/* <DarkMode /> */}
         <motion.nav
           variants={navVariant}
           initial="hidden"
@@ -60,7 +60,7 @@ const NavBar = () => {
           className="nav grid"
         >
           <ul className="nav__list flex">
-            {["Home", "About", "Projects", "Skills", "Contact"].map(
+            {["Home", "About", "Skills", "Contact"].map(
               listItem => (
                 <Link
                   spy={true}

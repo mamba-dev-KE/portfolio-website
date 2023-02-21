@@ -1,7 +1,7 @@
 import React from "react";
-import "./Skills.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import "./Skills.scss";
 
 const Skills = () => {
   const data = useStaticQuery(graphql`

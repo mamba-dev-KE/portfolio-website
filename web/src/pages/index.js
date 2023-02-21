@@ -6,7 +6,7 @@ import {
   Hero,
   About,
   Footer,
-  Projects,
+  // Projects,
   Skills,
   Contact,
 } from "../components";
@@ -18,7 +18,7 @@ export default function Home() {
         <Layout>
           <Hero />
           <About />
-          <Projects />
+          {/* <Projects /> */}
           <Skills />
           <Contact />
         </Layout>

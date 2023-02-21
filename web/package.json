@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-website",
+  "name": "portfolio-website-web",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
@@ -21,7 +21,6 @@
     "@react-icons/all-files": "^4.1.0",
     "framer-motion": "^6.2.7",
     "gatsby": "^4.7.2",
-    "gatsby-plugin-image": "^2.8.0",
     "gatsby-plugin-sass": "^5.7.0",
     "gatsby-plugin-sharp": "^4.8.0",
     "gatsby-source-filesystem": "^4.8.0",
@@ -30,8 +29,7 @@
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scroll": "^1.8.6",
-    "sass": "^1.49.8"
+    "react-scroll": "^1.8.6"
   },
   "devDependencies": {
     "prettier": "^2.5.1"

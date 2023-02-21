@@ -48,10 +48,12 @@
 }
 
 .about__img {
-  width: 90%;
+  margin-block-start: 2em;
+  line-height: calc(var(--line-height) - 0.1);
   grid-column: 1 / span 6;
 
   @media (min-width: 1250px) {
+    list-style: var(--line-height);
     grid-column: 4 / -1;
   }
 }

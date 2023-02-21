@@ -4,6 +4,6 @@ export default {
   type: "document",
   fields: [
     { name: "about", title: "About", type: "string" },
-    { name: "description", title: "Description", type: "string" },
+    { name: "description", title: "Description", type: "text" },
   ],
 };
